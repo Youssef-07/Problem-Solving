@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	long long eyes, body, mouth;
+	long long katryoksha = 0;
+	cin >> eyes >> mouth >> body;
+
+	// Third case
+	long long mn = min({ eyes,mouth,body });
+	katryoksha += mn;
+	eyes -= mn;
+	mouth -= mn;
+	body -= mn;
+
+	// First case
+	mn = min(eyes / 2, body);
+
+	katryoksha += mn;
+	cout << katryoksha;
+
+}
+
